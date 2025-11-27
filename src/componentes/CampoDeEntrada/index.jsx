@@ -1,4 +1,4 @@
-import '.campo-de-entrada.estilos.css';
+import "./campo-de-entrada.estilos.css";
 export function CampoDeEntrada(props) {
-  return <input {...props}  className='campo-entrada'/>;
+  return <input {...props} className="campo-entrada" />;
 }
