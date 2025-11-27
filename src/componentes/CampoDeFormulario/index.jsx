@@ -1,4 +1,4 @@
-import './Campo-de-formulario.estilos.css';
+import './campo-de-formulario.estilos.css';
 
 export function CampoDeFormulario({ children }) {
   return (
