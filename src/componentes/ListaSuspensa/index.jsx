@@ -1,13 +1,17 @@
 import "./temas.estilos.css";
-export function ListaSuspensa() {
+export function ListaSuspensa({itens, ...rest}) {
   return (
- <select className="lista-suspensa" id="lista-suspensa">
-  <option value="IA">IA</option>
-  <option value="Front-end">Front-end</option>
-  <option value="Backend">Backend</option>
-  <option value="Deveops">Deveops</option>
-  <option value="Data Science">Data Science</option>
-  <option value="Clound">Clound</option>
+ <select {...rest} className="lista-suspensa" defaultValue=""> {/* Valor padrao vazio, o rest vai espalhar as demais propiedades */}
+  <option value="" disabled>  {/* Opcao padrao desabilitada */}
+    Selecione uma opcao </option>
+    {itens.map(function (item){ 
+      return (
+        <option key={item.id} value={item.id}>
+          {item.nome}
+        </option> 
+      )
+    })}
+    
  </select>
   )
 }
